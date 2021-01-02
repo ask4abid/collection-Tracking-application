@@ -6,7 +6,7 @@ import static org.hamcrest.Matchers.hasItems;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import com.finca.ccwapp.CollectionTrackingApplicationApp;
+import com.finca.ccwapp.CcwApp;
 import com.finca.ccwapp.domain.Authority;
 import com.finca.ccwapp.domain.User;
 import com.finca.ccwapp.repository.UserRepository;
@@ -35,7 +35,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @AutoConfigureMockMvc
 @WithMockUser(authorities = AuthoritiesConstants.ADMIN)
-@SpringBootTest(classes = CollectionTrackingApplicationApp.class)
+@SpringBootTest(classes = CcwApp.class)
 public class UserResourceIT {
     private static final String DEFAULT_LOGIN = "johndoe";
     private static final String UPDATED_LOGIN = "jhipster";

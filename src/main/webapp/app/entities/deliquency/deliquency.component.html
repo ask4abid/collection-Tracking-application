@@ -1,0 +1,63 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="ccwApp.deliquency.home.title">Deliquencies</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-deliquency" [routerLink]="['/deliquency/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="ccwApp.deliquency.home.createLabel">
+            Create a new Deliquency
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="deliquencies?.length === 0">
+        <span jhiTranslate="ccwApp.deliquency.home.notFound">No deliquencies found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="deliquencies && deliquencies.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+                    <th scope="col" ><span jhiTranslate="ccwApp.deliquency.observatoinid">Observatoinid</span></th>
+                    <th scope="col" ><span jhiTranslate="ccwApp.deliquency.observation">Observation</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let deliquency of deliquencies ;trackBy: trackId">
+                    <td><a [routerLink]="['/deliquency', deliquency.id, 'view']">{{ deliquency.id }}</a></td>
+                    <td>{{ deliquency.observatoinid }}</td>
+                    <td>{{ deliquency.observation }}</td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/deliquency', deliquency.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/deliquency', deliquency.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(deliquency)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

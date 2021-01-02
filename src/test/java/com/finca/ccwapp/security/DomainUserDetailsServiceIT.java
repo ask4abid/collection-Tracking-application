@@ -3,7 +3,7 @@ package com.finca.ccwapp.security;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
-import com.finca.ccwapp.CollectionTrackingApplicationApp;
+import com.finca.ccwapp.CcwApp;
 import com.finca.ccwapp.domain.User;
 import com.finca.ccwapp.repository.UserRepository;
 import java.util.Locale;
@@ -19,7 +19,7 @@ import org.springframework.transaction.annotation.Transactional;
 /**
  * Integrations tests for {@link DomainUserDetailsService}.
  */
-@SpringBootTest(classes = CollectionTrackingApplicationApp.class)
+@SpringBootTest(classes = CcwApp.class)
 @Transactional
 public class DomainUserDetailsServiceIT {
     private static final String USER_ONE_LOGIN = "test-user-one";

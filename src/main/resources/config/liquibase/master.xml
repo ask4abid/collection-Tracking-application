@@ -5,16 +5,22 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
 
     <property name="now" value="now()" dbms="h2"/>
-    <property name="now" value="GETDATE()" dbms="mssql"/>
+    <property name="now" value="now()" dbms="mysql, mariadb"/>
 
     <property name="floatType" value="float4" dbms="postgresql, h2"/>
     <property name="floatType" value="float" dbms="mysql, oracle, mssql, mariadb"/>
     <property name="clobType" value="clob" dbms="h2"/>
     <property name="clobType" value="clob" dbms="mysql, oracle, mssql, mariadb, postgresql"/>
-    <property name="uuidType" value="uuid" dbms="h2, mssql"/>
+    <property name="uuidType" value="varchar(36)" dbms="h2, mysql, mariadb"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210102114819_added_entity_Proosals.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210102114919_added_entity_Visits.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210102115019_added_entity_VisitedBy.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210102115119_added_entity_Deliquency.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20210102114819_added_entity_constraints_Proosals.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210102115019_added_entity_constraints_VisitedBy.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
 </databaseChangeLog>

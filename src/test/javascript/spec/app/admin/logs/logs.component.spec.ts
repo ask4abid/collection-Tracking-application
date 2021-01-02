@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed, async } from '@angular/core/testing';
 import { of } from 'rxjs';
 
-import { CollectionTrackingApplicationTestModule } from '../../../test.module';
+import { CcwAppTestModule } from '../../../test.module';
 import { LogsComponent } from 'app/admin/logs/logs.component';
 import { LogsService } from 'app/admin/logs/logs.service';
 import { Log } from 'app/admin/logs/log.model';
@@ -14,7 +14,7 @@ describe('Component Tests', () => {
 
     beforeEach(async(() => {
       TestBed.configureTestingModule({
-        imports: [CollectionTrackingApplicationTestModule],
+        imports: [CcwAppTestModule],
         declarations: [LogsComponent],
         providers: [LogsService],
       })

@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { CollectionTrackingApplicationSharedModule } from 'app/shared/shared.module';
+import { CcwAppSharedModule } from 'app/shared/shared.module';
 
 import { AuditsComponent } from './audits.component';
 
 import { auditsRoute } from './audits.route';
 
 @NgModule({
-  imports: [CollectionTrackingApplicationSharedModule, RouterModule.forChild([auditsRoute])],
+  imports: [CcwAppSharedModule, RouterModule.forChild([auditsRoute])],
   declarations: [AuditsComponent],
 })
 export class AuditsModule {}

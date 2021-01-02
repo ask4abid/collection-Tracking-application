@@ -2,7 +2,7 @@ package com.finca.ccwapp.service;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.finca.ccwapp.CollectionTrackingApplicationApp;
+import com.finca.ccwapp.CcwApp;
 import com.finca.ccwapp.domain.PersistentAuditEvent;
 import com.finca.ccwapp.repository.PersistenceAuditEventRepository;
 import io.github.jhipster.config.JHipsterProperties;
@@ -17,7 +17,7 @@ import org.springframework.transaction.annotation.Transactional;
 /**
  * Integration tests for {@link AuditEventService}.
  */
-@SpringBootTest(classes = CollectionTrackingApplicationApp.class)
+@SpringBootTest(classes = CcwApp.class)
 @Transactional
 public class AuditEventServiceIT {
     @Autowired

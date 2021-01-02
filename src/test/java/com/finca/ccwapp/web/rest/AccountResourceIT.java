@@ -5,7 +5,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import com.finca.ccwapp.CollectionTrackingApplicationApp;
+import com.finca.ccwapp.CcwApp;
 import com.finca.ccwapp.config.Constants;
 import com.finca.ccwapp.domain.User;
 import com.finca.ccwapp.repository.AuthorityRepository;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @AutoConfigureMockMvc
 @WithMockUser(value = TEST_USER_LOGIN)
-@SpringBootTest(classes = CollectionTrackingApplicationApp.class)
+@SpringBootTest(classes = CcwApp.class)
 public class AccountResourceIT {
     static final String TEST_USER_LOGIN = "test";
 

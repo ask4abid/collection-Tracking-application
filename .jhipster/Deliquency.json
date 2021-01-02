@@ -1,0 +1,36 @@
+{
+  "name": "Deliquency",
+  "fields": [
+    {
+      "fieldName": "observatoinid",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "10"
+    },
+    {
+      "fieldName": "observation",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "20"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "proosals",
+      "otherEntityRelationshipName": "deliquency",
+      "relationshipName": "proosals"
+    }
+  ],
+  "changelogDate": "20210102115119",
+  "entityTableName": "deliquency",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": ["ccwApp"]
+}

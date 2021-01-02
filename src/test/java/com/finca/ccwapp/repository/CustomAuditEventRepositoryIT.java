@@ -3,7 +3,7 @@ package com.finca.ccwapp.repository;
 import static com.finca.ccwapp.repository.CustomAuditEventRepository.EVENT_DATA_COLUMN_MAX_LENGTH;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.finca.ccwapp.CollectionTrackingApplicationApp;
+import com.finca.ccwapp.CcwApp;
 import com.finca.ccwapp.config.Constants;
 import com.finca.ccwapp.config.audit.AuditEventConverter;
 import com.finca.ccwapp.domain.PersistentAuditEvent;
@@ -26,7 +26,7 @@ import org.springframework.transaction.annotation.Transactional;
 /**
  * Integration tests for {@link CustomAuditEventRepository}.
  */
-@SpringBootTest(classes = CollectionTrackingApplicationApp.class)
+@SpringBootTest(classes = CcwApp.class)
 @Transactional
 public class CustomAuditEventRepositoryIT {
     @Autowired
