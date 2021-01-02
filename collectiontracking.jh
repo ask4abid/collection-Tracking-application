@@ -1,0 +1,82 @@
+
+application {
+  config {
+    baseName ccwApp,
+    applicationType monolith,
+    packageName com.finca.ccwapp,
+    authenticationType jwt,
+    prodDatabaseType mysql,
+    clientFramework angular
+  }
+  entities *
+}
+
+entity Proosals {
+    
+    unitid String required maxlength(10)
+    businessproposal String required maxlength(10)
+    subproposal String required maxlength(10)
+    relationid String required maxlength(10)
+    mobilenumber String required maxlength(15)
+    accountnumber String required maxlength (20)
+    accounttitle  String required maxlength (40)
+    numerofvisits String required maxlength (10)
+    outstandingamount String required maxlength (100)
+    outstandingprofit String required maxlength (100)
+    oddays            String required maxlength (10)
+    loanofficer       String required maxlength (10)
+    promisetopay LocalDate
+    remarks String  required maxlength (100)
+    delequencyreason String required maxlength(100)
+    
+}
+
+entity Visits {
+    unitid String required maxlength(10)
+    businessproposal String required maxlength(10)
+    subproposal String required maxlength(10)
+    promisetopay LocalDate
+    remarks String  required maxlength (100)
+    visitedby String required maxlength (30)
+    employeeid String required maxlength (10)
+  
+
+}
+
+relationship OneToMany {
+  Visits to Proosals
+}
+
+    entity VisitedBy {
+    unitid String required maxlength(10)
+    firstname String required maxlength(10)
+    lastname String required maxlength(10)
+    status String required maxlength (30)
+    employeeid String required maxlength (10)
+    role  String required maxlength (10)
+    designation String required maxlength (10)
+    vistdate LocalDate
+    
+}
+
+relationship OneToMany {
+  Proosals to VisitedBy
+}
+    entity Deliquency {
+    observatoinid  Sting required maxlength (10)
+    observation String required maxlength (20)
+
+}
+
+relationship OneToMany {
+  Deliquency to Proosals
+}
+
+paginate Proosals,VisitedBy,Visits with pagination
+
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+
+filter VisitedBy
