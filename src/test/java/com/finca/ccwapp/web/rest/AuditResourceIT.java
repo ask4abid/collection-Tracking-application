@@ -5,7 +5,7 @@ import static org.hamcrest.Matchers.hasItem;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import com.finca.ccwapp.CollectionTrackingApplicationApp;
+import com.finca.ccwapp.CcwApp;
 import com.finca.ccwapp.domain.PersistentAuditEvent;
 import com.finca.ccwapp.repository.PersistenceAuditEventRepository;
 import com.finca.ccwapp.security.AuthoritiesConstants;
@@ -28,7 +28,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @AutoConfigureMockMvc
 @WithMockUser(authorities = AuthoritiesConstants.ADMIN)
-@SpringBootTest(classes = CollectionTrackingApplicationApp.class)
+@SpringBootTest(classes = CcwApp.class)
 @Transactional
 public class AuditResourceIT {
     private static final String SAMPLE_PRINCIPAL = "SAMPLE_PRINCIPAL";

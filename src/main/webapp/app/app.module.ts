@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import './vendor';
-import { CollectionTrackingApplicationSharedModule } from 'app/shared/shared.module';
-import { CollectionTrackingApplicationCoreModule } from 'app/core/core.module';
-import { CollectionTrackingApplicationAppRoutingModule } from './app-routing.module';
-import { CollectionTrackingApplicationHomeModule } from './home/home.module';
-import { CollectionTrackingApplicationEntityModule } from './entities/entity.module';
+import { CcwAppSharedModule } from 'app/shared/shared.module';
+import { CcwAppCoreModule } from 'app/core/core.module';
+import { CcwAppAppRoutingModule } from './app-routing.module';
+import { CcwAppHomeModule } from './home/home.module';
+import { CcwAppEntityModule } from './entities/entity.module';
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 import { MainComponent } from './layouts/main/main.component';
 import { NavbarComponent } from './layouts/navbar/navbar.component';
@@ -18,14 +18,14 @@ import { ErrorComponent } from './layouts/error/error.component';
 @NgModule({
   imports: [
     BrowserModule,
-    CollectionTrackingApplicationSharedModule,
-    CollectionTrackingApplicationCoreModule,
-    CollectionTrackingApplicationHomeModule,
+    CcwAppSharedModule,
+    CcwAppCoreModule,
+    CcwAppHomeModule,
     // jhipster-needle-angular-add-module JHipster will add new module here
-    CollectionTrackingApplicationEntityModule,
-    CollectionTrackingApplicationAppRoutingModule,
+    CcwAppEntityModule,
+    CcwAppAppRoutingModule,
   ],
   declarations: [MainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, ActiveMenuDirective, FooterComponent],
   bootstrap: [MainComponent],
 })
-export class CollectionTrackingApplicationAppModule {}
+export class CcwAppAppModule {}

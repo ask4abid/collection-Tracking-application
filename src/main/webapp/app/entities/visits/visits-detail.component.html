@@ -1,0 +1,54 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="visits">
+            <h2><span jhiTranslate="ccwApp.visits.detail.title">Visits</span> {{ visits.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="ccwApp.visits.unitid">Unitid</span></dt>
+                <dd>
+                    <span>{{ visits.unitid }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApp.visits.businessproposal">Businessproposal</span></dt>
+                <dd>
+                    <span>{{ visits.businessproposal }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApp.visits.subproposal">Subproposal</span></dt>
+                <dd>
+                    <span>{{ visits.subproposal }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApp.visits.promisetopay">Promisetopay</span></dt>
+                <dd>
+                    <span>{{ visits.promisetopay }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApp.visits.remarks">Remarks</span></dt>
+                <dd>
+                    <span>{{ visits.remarks }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApp.visits.visitedby">Visitedby</span></dt>
+                <dd>
+                    <span>{{ visits.visitedby }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApp.visits.employeeid">Employeeid</span></dt>
+                <dd>
+                    <span>{{ visits.employeeid }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/visits', visits.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

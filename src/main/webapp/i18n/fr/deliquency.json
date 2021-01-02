@@ -1,0 +1,24 @@
+{
+  "ccwApp": {
+    "deliquency": {
+      "home": {
+        "title": "Deliquencies",
+        "createLabel": "Créer un nouveau Deliquency",
+        "createOrEditLabel": "Créer ou éditer un Deliquency",
+        "notFound": "Aucun Deliquency trouvé"
+      },
+      "created": "Un nouveau Deliquency a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Deliquency avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Deliquency avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Deliquency {{ id }} ?"
+      },
+      "detail": {
+        "title": "Deliquency"
+      },
+      "observatoinid": "Observatoinid",
+      "observation": "Observation",
+      "proosals": "Proosals"
+    }
+  }
+}

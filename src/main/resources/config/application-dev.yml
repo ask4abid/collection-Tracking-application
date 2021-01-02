@@ -37,8 +37,8 @@ spring:
       indent-output: true
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:h2:file:./target/h2db/db/collectiontrackingapplication;DB_CLOSE_DELAY=-1
-    username: CollectionTrackingApplication
+    url: jdbc:h2:file:./target/h2db/db/ccwapp;DB_CLOSE_DELAY=-1
+    username: ccwApp
     password:
     hikari:
       poolName: Hikari

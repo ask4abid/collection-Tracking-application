@@ -1,0 +1,30 @@
+{
+  "ccwApp": {
+    "visitedBy": {
+      "home": {
+        "title": "Visited Bies",
+        "createLabel": "Create a new Visited By",
+        "createOrEditLabel": "Create or edit a Visited By",
+        "notFound": "No Visited Bies found"
+      },
+      "created": "A new Visited By is created with identifier {{ param }}",
+      "updated": "A Visited By is updated with identifier {{ param }}",
+      "deleted": "A Visited By is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Visited By {{ id }}?"
+      },
+      "detail": {
+        "title": "Visited By"
+      },
+      "unitid": "Unitid",
+      "firstname": "Firstname",
+      "lastname": "Lastname",
+      "status": "Status",
+      "employeeid": "Employeeid",
+      "role": "Role",
+      "designation": "Designation",
+      "vistdate": "Vistdate",
+      "proosals": "Proosals"
+    }
+  }
+}

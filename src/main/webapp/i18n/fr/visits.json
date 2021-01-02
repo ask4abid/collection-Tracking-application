@@ -1,0 +1,29 @@
+{
+  "ccwApp": {
+    "visits": {
+      "home": {
+        "title": "Visits",
+        "createLabel": "Créer un nouveau Visits",
+        "createOrEditLabel": "Créer ou éditer un Visits",
+        "notFound": "Aucun Visits trouvé"
+      },
+      "created": "Un nouveau Visits a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Visits avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Visits avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Visits {{ id }} ?"
+      },
+      "detail": {
+        "title": "Visits"
+      },
+      "unitid": "Unitid",
+      "businessproposal": "Businessproposal",
+      "subproposal": "Subproposal",
+      "promisetopay": "Promisetopay",
+      "remarks": "Remarks",
+      "visitedby": "Visitedby",
+      "employeeid": "Employeeid",
+      "proosals": "Proosals"
+    }
+  }
+}

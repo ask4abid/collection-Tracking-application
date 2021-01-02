@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "collection-tracking-application": {
+    "ccw-app": {
       "root": "",
       "sourceRoot": "src/main/webapp",
       "projectType": "application",
@@ -29,7 +29,7 @@
       "architect": {}
     }
   },
-  "defaultProject": "collection-tracking-application",
+  "defaultProject": "ccw-app",
   "cli": {
     "packageManager": "npm"
   }

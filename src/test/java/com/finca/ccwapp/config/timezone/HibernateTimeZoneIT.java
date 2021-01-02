@@ -3,7 +3,7 @@ package com.finca.ccwapp.config.timezone;
 import static java.lang.String.format;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.finca.ccwapp.CollectionTrackingApplicationApp;
+import com.finca.ccwapp.CcwApp;
 import com.finca.ccwapp.repository.timezone.DateTimeWrapper;
 import com.finca.ccwapp.repository.timezone.DateTimeWrapperRepository;
 import java.time.*;
@@ -20,7 +20,7 @@ import org.springframework.transaction.annotation.Transactional;
 /**
  * Integration tests for the ZoneId Hibernate configuration.
  */
-@SpringBootTest(classes = CollectionTrackingApplicationApp.class)
+@SpringBootTest(classes = CcwApp.class)
 public class HibernateTimeZoneIT {
     @Autowired
     private DateTimeWrapperRepository dateTimeWrapperRepository;

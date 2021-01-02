@@ -59,7 +59,7 @@ management:
 
 spring:
   application:
-    name: CollectionTrackingApplication
+    name: ccwApp
   profiles:
     # The commented value for `active` can be replaced with valid Spring profiles to load.
     # Otherwise, it will be filled in by maven when building the JAR file
@@ -84,9 +84,6 @@ spring:
       hibernate.jdbc.batch_size: 25
       hibernate.order_inserts: true
       hibernate.order_updates: true
-      # modify fetch size as necessary
-      hibernate.jdbc.fetch_size: 150
-      hibernate.criteria.literal_handling_mode: BIND
       hibernate.query.fail_on_pagination_over_collection_fetch: true
       hibernate.query.in_clause_parameter_padding: true
     hibernate:
@@ -100,13 +97,13 @@ spring:
     allow-bean-definition-overriding: true
   task:
     execution:
-      thread-name-prefix: collection-tracking-application-task-
+      thread-name-prefix: ccw-app-task-
       pool:
         core-size: 2
         max-size: 50
         queue-capacity: 10000
     scheduling:
-      thread-name-prefix: collection-tracking-application-scheduling-
+      thread-name-prefix: ccw-app-scheduling-
       pool:
         size: 2
   thymeleaf:
@@ -134,7 +131,7 @@ info:
 
 jhipster:
   clientApp:
-    name: 'collectionTrackingApplicationApp'
+    name: 'ccwApp'
   # By default CORS is disabled. Uncomment to enable.
   # cors:
   #     allowed-origins: "*"
@@ -144,11 +141,11 @@ jhipster:
   #     allow-credentials: true
   #     max-age: 1800
   mail:
-    from: CollectionTrackingApplication@localhost
+    from: ccwApp@localhost
   swagger:
     default-include-pattern: /api/.*
-    title: CollectionTrackingApplication API
-    description: CollectionTrackingApplication API documentation
+    title: ccwApp API
+    description: ccwApp API documentation
     version: 0.0.1
     terms-of-service-url:
     contact-name:

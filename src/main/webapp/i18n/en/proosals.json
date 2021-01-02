@@ -1,0 +1,39 @@
+{
+  "ccwApp": {
+    "proosals": {
+      "home": {
+        "title": "Proosals",
+        "createLabel": "Create a new Proosals",
+        "createOrEditLabel": "Create or edit a Proosals",
+        "notFound": "No Proosals found"
+      },
+      "created": "A new Proosals is created with identifier {{ param }}",
+      "updated": "A Proosals is updated with identifier {{ param }}",
+      "deleted": "A Proosals is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Proosals {{ id }}?"
+      },
+      "detail": {
+        "title": "Proosals"
+      },
+      "unitid": "Unitid",
+      "businessproposal": "Businessproposal",
+      "subproposal": "Subproposal",
+      "relationid": "Relationid",
+      "mobilenumber": "Mobilenumber",
+      "accountnumber": "Accountnumber",
+      "accounttitle": "Accounttitle",
+      "numerofvisits": "Numerofvisits",
+      "outstandingamount": "Outstandingamount",
+      "outstandingprofit": "Outstandingprofit",
+      "oddays": "Oddays",
+      "loanofficer": "Loanofficer",
+      "promisetopay": "Promisetopay",
+      "remarks": "Remarks",
+      "delequencyreason": "Delequencyreason",
+      "visitedBy": "Visited By",
+      "visits": "Visits",
+      "deliquency": "Deliquency"
+    }
+  }
+}

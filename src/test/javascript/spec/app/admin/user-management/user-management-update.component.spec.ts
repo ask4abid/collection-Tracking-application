@@ -5,7 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { of } from 'rxjs';
 
 import { Authority } from 'app/shared/constants/authority.constants';
-import { CollectionTrackingApplicationTestModule } from '../../../test.module';
+import { CcwAppTestModule } from '../../../test.module';
 import { UserManagementUpdateComponent } from 'app/admin/user-management/user-management-update.component';
 import { UserService } from 'app/core/user/user.service';
 import { User } from 'app/core/user/user.model';
@@ -21,7 +21,7 @@ describe('Component Tests', () => {
 
     beforeEach(async(() => {
       TestBed.configureTestingModule({
-        imports: [CollectionTrackingApplicationTestModule],
+        imports: [CcwAppTestModule],
         declarations: [UserManagementUpdateComponent],
         providers: [
           FormBuilder,

@@ -1,0 +1,98 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="proosals">
+            <h2><span jhiTranslate="ccwApp.proosals.detail.title">Proosals</span> {{ proosals.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="ccwApp.proosals.unitid">Unitid</span></dt>
+                <dd>
+                    <span>{{ proosals.unitid }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApp.proosals.businessproposal">Businessproposal</span></dt>
+                <dd>
+                    <span>{{ proosals.businessproposal }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApp.proosals.subproposal">Subproposal</span></dt>
+                <dd>
+                    <span>{{ proosals.subproposal }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApp.proosals.relationid">Relationid</span></dt>
+                <dd>
+                    <span>{{ proosals.relationid }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApp.proosals.mobilenumber">Mobilenumber</span></dt>
+                <dd>
+                    <span>{{ proosals.mobilenumber }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApp.proosals.accountnumber">Accountnumber</span></dt>
+                <dd>
+                    <span>{{ proosals.accountnumber }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApp.proosals.accounttitle">Accounttitle</span></dt>
+                <dd>
+                    <span>{{ proosals.accounttitle }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApp.proosals.numerofvisits">Numerofvisits</span></dt>
+                <dd>
+                    <span>{{ proosals.numerofvisits }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApp.proosals.outstandingamount">Outstandingamount</span></dt>
+                <dd>
+                    <span>{{ proosals.outstandingamount }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApp.proosals.outstandingprofit">Outstandingprofit</span></dt>
+                <dd>
+                    <span>{{ proosals.outstandingprofit }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApp.proosals.oddays">Oddays</span></dt>
+                <dd>
+                    <span>{{ proosals.oddays }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApp.proosals.loanofficer">Loanofficer</span></dt>
+                <dd>
+                    <span>{{ proosals.loanofficer }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApp.proosals.promisetopay">Promisetopay</span></dt>
+                <dd>
+                    <span>{{ proosals.promisetopay }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApp.proosals.remarks">Remarks</span></dt>
+                <dd>
+                    <span>{{ proosals.remarks }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApp.proosals.delequencyreason">Delequencyreason</span></dt>
+                <dd>
+                    <span>{{ proosals.delequencyreason }}</span>
+                </dd>
+                <dt><span jhiTranslate="ccwApp.proosals.visits">Visits</span></dt>
+                <dd>
+                    <div *ngIf="proosals.visitsId">
+                        <a [routerLink]="['/visits', proosals.visitsId, 'view']">{{ proosals.visitsId }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="ccwApp.proosals.deliquency">Deliquency</span></dt>
+                <dd>
+                    <div *ngIf="proosals.deliquencyId">
+                        <a [routerLink]="['/deliquency', proosals.deliquencyId, 'view']">{{ proosals.deliquencyId }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/proosals', proosals.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

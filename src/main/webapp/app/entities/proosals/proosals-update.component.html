@@ -1,0 +1,276 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-proosals-heading" jhiTranslate="ccwApp.proosals.home.createOrEditLabel">Create or edit a Proosals</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApp.proosals.unitid" for="field_unitid">Unitid</label>
+                    <input type="text" class="form-control" name="unitid" id="field_unitid"
+                           formControlName="unitid"/>
+                    <div *ngIf="editForm.get('unitid')!.invalid && (editForm.get('unitid')!.dirty || editForm.get('unitid')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('unitid')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('unitid')?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" [translateValues]="{ max: 10 }">
+                        This field cannot be longer than 10 characters.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApp.proosals.businessproposal" for="field_businessproposal">Businessproposal</label>
+                    <input type="text" class="form-control" name="businessproposal" id="field_businessproposal"
+                           formControlName="businessproposal"/>
+                    <div *ngIf="editForm.get('businessproposal')!.invalid && (editForm.get('businessproposal')!.dirty || editForm.get('businessproposal')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('businessproposal')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('businessproposal')?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" [translateValues]="{ max: 10 }">
+                        This field cannot be longer than 10 characters.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApp.proosals.subproposal" for="field_subproposal">Subproposal</label>
+                    <input type="text" class="form-control" name="subproposal" id="field_subproposal"
+                           formControlName="subproposal"/>
+                    <div *ngIf="editForm.get('subproposal')!.invalid && (editForm.get('subproposal')!.dirty || editForm.get('subproposal')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('subproposal')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('subproposal')?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" [translateValues]="{ max: 10 }">
+                        This field cannot be longer than 10 characters.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApp.proosals.relationid" for="field_relationid">Relationid</label>
+                    <input type="text" class="form-control" name="relationid" id="field_relationid"
+                           formControlName="relationid"/>
+                    <div *ngIf="editForm.get('relationid')!.invalid && (editForm.get('relationid')!.dirty || editForm.get('relationid')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('relationid')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('relationid')?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" [translateValues]="{ max: 10 }">
+                        This field cannot be longer than 10 characters.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApp.proosals.mobilenumber" for="field_mobilenumber">Mobilenumber</label>
+                    <input type="text" class="form-control" name="mobilenumber" id="field_mobilenumber"
+                           formControlName="mobilenumber"/>
+                    <div *ngIf="editForm.get('mobilenumber')!.invalid && (editForm.get('mobilenumber')!.dirty || editForm.get('mobilenumber')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('mobilenumber')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('mobilenumber')?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" [translateValues]="{ max: 15 }">
+                        This field cannot be longer than 15 characters.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApp.proosals.accountnumber" for="field_accountnumber">Accountnumber</label>
+                    <input type="text" class="form-control" name="accountnumber" id="field_accountnumber"
+                           formControlName="accountnumber"/>
+                    <div *ngIf="editForm.get('accountnumber')!.invalid && (editForm.get('accountnumber')!.dirty || editForm.get('accountnumber')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('accountnumber')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('accountnumber')?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" [translateValues]="{ max: 20 }">
+                        This field cannot be longer than 20 characters.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApp.proosals.accounttitle" for="field_accounttitle">Accounttitle</label>
+                    <input type="text" class="form-control" name="accounttitle" id="field_accounttitle"
+                           formControlName="accounttitle"/>
+                    <div *ngIf="editForm.get('accounttitle')!.invalid && (editForm.get('accounttitle')!.dirty || editForm.get('accounttitle')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('accounttitle')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('accounttitle')?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" [translateValues]="{ max: 40 }">
+                        This field cannot be longer than 40 characters.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApp.proosals.numerofvisits" for="field_numerofvisits">Numerofvisits</label>
+                    <input type="text" class="form-control" name="numerofvisits" id="field_numerofvisits"
+                           formControlName="numerofvisits"/>
+                    <div *ngIf="editForm.get('numerofvisits')!.invalid && (editForm.get('numerofvisits')!.dirty || editForm.get('numerofvisits')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('numerofvisits')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('numerofvisits')?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" [translateValues]="{ max: 10 }">
+                        This field cannot be longer than 10 characters.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApp.proosals.outstandingamount" for="field_outstandingamount">Outstandingamount</label>
+                    <input type="text" class="form-control" name="outstandingamount" id="field_outstandingamount"
+                           formControlName="outstandingamount"/>
+                    <div *ngIf="editForm.get('outstandingamount')!.invalid && (editForm.get('outstandingamount')!.dirty || editForm.get('outstandingamount')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('outstandingamount')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('outstandingamount')?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" [translateValues]="{ max: 100 }">
+                        This field cannot be longer than 100 characters.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApp.proosals.outstandingprofit" for="field_outstandingprofit">Outstandingprofit</label>
+                    <input type="text" class="form-control" name="outstandingprofit" id="field_outstandingprofit"
+                           formControlName="outstandingprofit"/>
+                    <div *ngIf="editForm.get('outstandingprofit')!.invalid && (editForm.get('outstandingprofit')!.dirty || editForm.get('outstandingprofit')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('outstandingprofit')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('outstandingprofit')?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" [translateValues]="{ max: 100 }">
+                        This field cannot be longer than 100 characters.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApp.proosals.oddays" for="field_oddays">Oddays</label>
+                    <input type="text" class="form-control" name="oddays" id="field_oddays"
+                           formControlName="oddays"/>
+                    <div *ngIf="editForm.get('oddays')!.invalid && (editForm.get('oddays')!.dirty || editForm.get('oddays')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('oddays')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('oddays')?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" [translateValues]="{ max: 10 }">
+                        This field cannot be longer than 10 characters.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApp.proosals.loanofficer" for="field_loanofficer">Loanofficer</label>
+                    <input type="text" class="form-control" name="loanofficer" id="field_loanofficer"
+                           formControlName="loanofficer"/>
+                    <div *ngIf="editForm.get('loanofficer')!.invalid && (editForm.get('loanofficer')!.dirty || editForm.get('loanofficer')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('loanofficer')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('loanofficer')?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" [translateValues]="{ max: 10 }">
+                        This field cannot be longer than 10 characters.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApp.proosals.promisetopay" for="field_promisetopay">Promisetopay</label>
+                    <div class="input-group">
+                        <input id="field_promisetopay" type="text" class="form-control" name="promisetopay" ngbDatepicker #promisetopayDp="ngbDatepicker" formControlName="promisetopay"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="promisetopayDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApp.proosals.remarks" for="field_remarks">Remarks</label>
+                    <input type="text" class="form-control" name="remarks" id="field_remarks"
+                           formControlName="remarks"/>
+                    <div *ngIf="editForm.get('remarks')!.invalid && (editForm.get('remarks')!.dirty || editForm.get('remarks')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('remarks')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('remarks')?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" [translateValues]="{ max: 100 }">
+                        This field cannot be longer than 100 characters.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApp.proosals.delequencyreason" for="field_delequencyreason">Delequencyreason</label>
+                    <input type="text" class="form-control" name="delequencyreason" id="field_delequencyreason"
+                           formControlName="delequencyreason"/>
+                    <div *ngIf="editForm.get('delequencyreason')!.invalid && (editForm.get('delequencyreason')!.dirty || editForm.get('delequencyreason')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('delequencyreason')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('delequencyreason')?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" [translateValues]="{ max: 100 }">
+                        This field cannot be longer than 100 characters.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApp.proosals.visits" for="field_visits">Visits</label>
+                    <select class="form-control" id="field_visits" name="visits" formControlName="visitsId">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="visitsOption.id" *ngFor="let visitsOption of visits; trackBy: trackById">{{ visitsOption.id }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="ccwApp.proosals.deliquency" for="field_deliquency">Deliquency</label>
+                    <select class="form-control" id="field_deliquency" name="deliquency" formControlName="deliquencyId">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="deliquencyOption.id" *ngFor="let deliquencyOption of deliquencies; trackBy: trackById">{{ deliquencyOption.id }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

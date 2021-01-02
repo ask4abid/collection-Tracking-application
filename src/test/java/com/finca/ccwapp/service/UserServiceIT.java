@@ -3,7 +3,7 @@ package com.finca.ccwapp.service;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.when;
 
-import com.finca.ccwapp.CollectionTrackingApplicationApp;
+import com.finca.ccwapp.CcwApp;
 import com.finca.ccwapp.config.Constants;
 import com.finca.ccwapp.domain.User;
 import com.finca.ccwapp.repository.UserRepository;
@@ -29,7 +29,7 @@ import org.springframework.transaction.annotation.Transactional;
 /**
  * Integration tests for {@link UserService}.
  */
-@SpringBootTest(classes = CollectionTrackingApplicationApp.class)
+@SpringBootTest(classes = CcwApp.class)
 @Transactional
 public class UserServiceIT {
     private static final String DEFAULT_LOGIN = "johndoe";

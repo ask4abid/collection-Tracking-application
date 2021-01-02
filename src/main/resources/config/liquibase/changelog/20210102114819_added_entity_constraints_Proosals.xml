@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity Proosals.
+    -->
+    <changeSet id="20210102114819-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="visits_id"
+                                 baseTableName="proosals"
+                                 constraintName="fk_proosals_visits_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="visits"/>
+
+        <addForeignKeyConstraint baseColumnNames="deliquency_id"
+                                 baseTableName="proosals"
+                                 constraintName="fk_proosals_deliquency_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="deliquency"/>
+
+    </changeSet>
+</databaseChangeLog>
